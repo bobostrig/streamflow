@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def load_streamflow(filename):
+def load_streamflow(filename): 
     csv_path = Path(__file__).with_name(filename)
     data = np.genfromtxt(csv_path, delimiter=",", dtype=str, skip_header=1)
     dates = data[:, 0].astype("datetime64[m]")
